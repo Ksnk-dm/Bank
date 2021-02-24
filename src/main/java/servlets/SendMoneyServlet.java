@@ -1,19 +1,18 @@
-package Servlets;
+package servlets;
 
-import Dao.BankAccountDao;
-import Dao.CurrencyDao;
-import Dao.TransactionDao;
-import Dao.UsersDao;
-import Entity.BankAccount;
-import Entity.Currency;
-import Entity.Transaction;
-import Entity.Users;
+import dao.BankAccountDao;
+import dao.CurrencyDao;
+import dao.TransactionDao;
+import dao.UsersDao;
+import entity.BankAccount;
+import entity.Currency;
+import entity.Transaction;
+import entity.Users;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
-import java.util.Collections;
 
 
 @WebServlet(name = "addMoneyServlet", value = "/addMoneyServlet")

@@ -1,6 +1,6 @@
-package Servlets;
+package servlets;
 
-import Dao.BankAccountDao;
+import dao.BankAccountDao;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;

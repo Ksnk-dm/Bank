@@ -1,39 +1,41 @@
-package Dao;
+package dao;
 
 
-import Entity.Currency;
-import Util.HibernateUtil;
+import entity.Users;
+import util.HibernateUtil;
 import org.hibernate.Session;
+
 import java.util.List;
 
-public class CurrencyDao extends Dao<Currency>{
+
+public class UsersDao extends Dao<Users> {
     @Override
-    public void insert(Currency exch) {
+    public void insert(Users users) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
-        session.save(exch);
+        session.save(users);
         session.getTransaction().commit();
         session.close();
     }
 
     @Override
-    public void update(Currency currency) {
+    public void update(Users users) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
-        session.update(currency);
+        session.update(users);
         session.getTransaction().commit();
         session.close();
     }
 
     @Override
-    public List<Currency> getAll(int all) {
+    public List<Users> getAll(int all) {
         return null;
     }
 
-    public Currency getCurByName(String name){
+    public Users getUserByDrfo(int drfo) {
         Session session = HibernateUtil.getSessionFactory().openSession();
+        Users a = session.createQuery("SELECT u from Users u where u.drfo = :username", Users.class).setParameter("username", drfo).getSingleResult();
         session.beginTransaction();
-        Currency a = session.createQuery("SELECT u from Currency u where u.name= :username", Currency.class).setParameter("username",name).getSingleResult();
         session.getTransaction().commit();
         session.close();
         return a;

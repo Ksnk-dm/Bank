@@ -1,24 +1,20 @@
-package Servlets;
+package servlets;
 
 
-import Dao.BankAccountDao;
-import Dao.CurrencyDao;
-import Dao.TransactionDao;
-import Dao.UsersDao;
-import Entity.BankAccount;
-import Entity.Currency;
-import Entity.Transaction;
-import Entity.Users;
+import dao.BankAccountDao;
+import dao.CurrencyDao;
+import dao.TransactionDao;
+import dao.UsersDao;
+import entity.BankAccount;
+import entity.Currency;
+import entity.Transaction;
+import entity.Users;
 
-import javax.persistence.criteria.CriteriaBuilder;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Collections;
-import java.util.Date;
 
 @WebServlet(name = "addBankAc", value = "/convert")
 public class AddNewBankAccountServlet extends HttpServlet {

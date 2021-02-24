@@ -1,9 +1,9 @@
-package Dao;
+package dao;
 
-import Entity.BankAccount;
-import Entity.Currency;
-import Entity.Users;
-import Util.HibernateUtil;
+import entity.BankAccount;
+import entity.Currency;
+import entity.Users;
+import util.HibernateUtil;
 import org.hibernate.Session;
 import java.util.List;
 

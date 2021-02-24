@@ -1,7 +1,7 @@
-package Dao;
+package dao;
 
-import Entity.Transaction;
-import Util.HibernateUtil;
+import entity.Transaction;
+import util.HibernateUtil;
 import org.hibernate.Session;
 
 import java.util.List;
